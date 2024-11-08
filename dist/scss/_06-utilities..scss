@@ -1,0 +1,33 @@
+.btn{
+    background-color: transparent;
+    padding: 0.8rem 2rem;
+    
+    &.bg--red{
+        background-color: $clr-red;
+        color: $clr-dark;
+        border-radius: 3rem;
+        font-weight: 500;
+    }
+    &.home{
+        background: linear-gradient(180deg, #dbe0ee, #4d65ac);
+        
+        color: #0f1422;
+        font-size: 3rem;
+        border-radius: 24px;
+        padding: 12px;
+        box-shadow: 0 1px 30px 0 rgba(130, 98, 147, .251), 0 0 22px 0 rgba(130, 98, 147, .349), 0 1px 46px 0 rgba(130, 98, 147, .102), 0 1px 40px 0 rgba(130, 98, 147, .102);
+        &:hover{
+            background: linear-gradient(180deg,#dbe0ee,#b5aef3);
+        }
+        
+    }
+    &.cMore{
+        background-color: #7083BD33;
+        font-size: 1.25rem;
+        border-radius: 6.5px;
+        padding: 8px 12px; 
+        &:hover{
+            background-color: rgba(112,131,189,.2);
+        }
+    }
+}
