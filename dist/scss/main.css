@@ -699,4 +699,357 @@ body {
   background-color: black;
   opacity: 0.7;
   z-index: 99;
+}
+
+officeBanner {
+  background-image: url(../img/office/officebanner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 60rem;
+  position: relative;
+  top: 8rem;
+}
+@media screen and (max-width: 760px) {
+  officeBanner {
+    background-image: url(../img/office/mobilebanner.jpg);
+    height: 927px;
+  }
+}
+officeBanner:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(10, 10, 10, 0.4);
+  z-index: 10;
+}
+officeBanner__wrapper {
+  position: absolute;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 95%;
+}
+officeBanner__wrapper h2 {
+  background-color: rgb(209, 54, 57);
+  color: #f9f9f9;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 760px) {
+  officeBanner__wrapper h2 {
+    font-size: 1rem;
+  }
+}
+officeBanner__wrapper h1 {
+  font-size: 7rem;
+  color: #f9f9f9;
+}
+@media screen and (max-width: 760px) {
+  officeBanner__wrapper h1 {
+    font-size: 4rem;
+    padding-top: 1rem;
+  }
+}
+
+.aroundWorld {
+  padding-top: 8rem;
+  background-color: #E7E6E3;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__title {
+  color: #252423;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__title h2 {
+  font-size: 6rem;
+  padding-bottom: 2rem;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__title h2 br {
+  display: none;
+}
+@media screen and (max-width: 760px) {
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__title h2 {
+    font-size: 3rem;
+  }
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__title h2 br {
+    display: block;
+  }
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__title p {
+  font-family: MarkPro;
+  font-size: 2.2rem;
+}
+@media screen and (max-width: 760px) {
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__title p {
+    font-size: 1.7rem;
+    width: 363px;
+  }
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__title p br {
+    display: none;
+  }
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar {
+  background-color: #2B2A29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0 0;
+  background-image: url(../img/office/heimer.jpg);
+  padding: 40px;
+  gap: 77rem;
+  width: 80%;
+}
+@media screen and (max-width: 760px) {
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar {
+    width: 95%;
+    padding: 15px;
+    gap: 0;
+  }
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .right {
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (max-width: 760px) {
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .right {
+    scale: 0.85;
+  }
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .right h4 {
+  color: #656462;
+  font-size: 2rem;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .right a {
+  font-size: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .right .chevDown {
+  width: 12px;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .right .chevDown path {
+  fill: #656462;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 760px) {
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left {
+    display: none;
+  }
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left .grid {
+  display: flex;
+  gap: 1rem;
+  font-family: MarkPro;
+  font-size: 1.4rem;
+  color: #656462;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left .grid.active {
+  color: #f9f9f9;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left .grid.active svg path {
+  fill: #f9f9f9;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left .grid svg {
+  width: 20px;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left .grid svg path {
+  fill: #656462;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left .list {
+  color: #656462;
+  display: flex;
+  gap: 1rem;
+  font-family: MarkPro;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left .list.active {
+  color: #f9f9f9;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left .list.active svg path {
+  fill: #f9f9f9;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left .list svg {
+  width: 20px;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__filter .filter__bar .left .list svg path {
+  fill: #656462;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content {
+  display: flex;
+  justify-content: center;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__grid {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  justify-items: center;
+}
+@media screen and (min-width: 980px) {
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__grid.active {
+    display: grid;
+  }
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__grid--item {
+  width: 360px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__grid--item .item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/office/officeplace/brush-panel-bg.svg);
+  padding: 3rem;
+  width: 300px;
+  position: relative;
+  z-index: 10;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__grid--item .item__content h4 {
+  font-size: 12px;
+  background-color: #2B2A29;
+  color: #f9f9f9;
+  padding: 0.3rem;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__grid--item .hovImg {
+  position: absolute;
+  width: 390px;
+  height: 530px;
+  opacity: 0;
+  z-index: 9;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__grid--item:hover {
+  overflow: hidden;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__grid--item:hover .hovImg {
+  opacity: 1;
+  scale: 0.9;
+  transition: 0.5s ease;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__grid--item:hover h2 {
+  text-decoration: underline;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list {
+  width: 85%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (max-width: 760px) {
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list {
+    display: flex;
+    width: 100%;
+  }
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list.active {
+  display: flex;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 0.5rem 3rem;
+  transition: 0.2s ease-in-out;
+}
+@media screen and (max-width: 760px) {
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list--item {
+    width: 115%;
+    scale: 0.85;
+  }
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list--item h2 {
+  font-size: 2rem;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list--item h4 {
+  font-family: MarkPro;
+  font-size: 1.3rem;
+  color: #656462;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list--item h3 {
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 760px) {
+  .aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list--item h3 {
+    display: none;
+  }
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list--item:hover {
+  transition: 0.2s ease-in-out;
+  background-color: #DBD9D6;
+}
+.aroundWorld .container .aroundWorld__wrapper .aroundWorld__content .aroundWorld__list--item:hover h2 {
+  text-decoration: underline;
+}
+
+.faq {
+  padding-bottom: 8rem;
+  background-color: #E7E6E3;
+}
+.faq .container .faq__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.faq .container .faq__wrapper .faq__wrap_wrap {
+  width: 55rem;
+}
+@media screen and (max-width: 760px) {
+  .faq .container .faq__wrapper .faq__wrap_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45rem;
+  }
+}
+.faq .container .faq__wrapper .faq__wrap_wrap .faq__title h2 {
+  font-size: 6rem;
+}
+@media screen and (max-width: 760px) {
+  .faq .container .faq__wrapper .faq__wrap_wrap .faq__title h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .faq .container .faq__wrapper .faq__wrap_wrap .questions {
+    display: none;
+  }
+}
+.faq .container .faq__wrapper .faq__wrap_wrap .questions__item h3 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+.faq .container .faq__wrapper .faq__wrap_wrap .questions__item p {
+  font-family: MarkPro;
+  font-size: 1.8rem;
+  margin-bottom: 6rem;
 }/*# sourceMappingURL=main.css.map */
