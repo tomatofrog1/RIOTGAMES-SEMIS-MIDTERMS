@@ -1,3 +1,13 @@
+.about{
+    .header{
+        background-color: rgba($color: $clr-dark, $alpha: 1);
+        border-bottom: 1px solid $clr-gray;
+        .header__nav .hideMobile .funcs .search{
+            border: none;
+            background-color: $clr-gray;
+        }
+    }
+}
 .header{
     background-color: rgba($color: $clr-dark, $alpha: 0);
     &.scroll{
