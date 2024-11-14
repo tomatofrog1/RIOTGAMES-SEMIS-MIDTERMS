@@ -1,8 +1,9 @@
 .footer{
     background-color: $clr-gray;
-    height: 90vh;
+    height: 100vh;
+    padding-top: 7rem;
     @include mediaQuerymin($break-lg){
-        height: 20rem;
+        height: unset;
     }
     &__wrapper{
         width: 44rem;
@@ -101,6 +102,7 @@
             align-items: center;
             border-top: 1px solid $clr-grey-text;
         }
+        
     }
 
     

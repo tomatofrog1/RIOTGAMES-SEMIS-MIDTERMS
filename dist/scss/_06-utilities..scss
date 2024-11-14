@@ -7,6 +7,7 @@
         color: $clr-dark;
         border-radius: 3rem;
         font-weight: 500;
+        font-size: 1.3rem;
     }
     &.home{
         background: linear-gradient(180deg, #dbe0ee, #4d65ac);
@@ -28,6 +29,28 @@
         padding: 8px 12px; 
         &:hover{
             background-color: rgba(112,131,189,.2);
+        }
+    }
+    &.hiring{
+        background-color: #4d65ac;
+        padding: 20px 50px;
+        font-size: 2rem;
+        border-radius: 2.5rem;
+        @include mediaQuery($break-md){
+            width: 467px;
+        }
+    }
+
+    // SK
+    &.viewQ{
+        padding: 11px 29px ;
+        color: $clr-red;
+        border: 1px solid $clr-dark;
+        font-size: 1.5rem;
+        font-family: $ff-faqBtn;
+        border-radius: 3rem;
+        @include mediaQuery($break-md){
+            scale: 0.85;
         }
     }
 }
