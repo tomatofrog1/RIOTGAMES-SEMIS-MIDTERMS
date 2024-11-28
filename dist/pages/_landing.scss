@@ -1,0 +1,825 @@
+.homeBanner{
+    video{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+        
+    }
+    &__wrapper{
+        height: 799px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        text-align: center;
+        overflow: hidden;
+        @include mediaQuery($break-md){
+            align-items: center;
+        }
+        @include mediaQuery($break-md){
+            width: 483px;
+            height: 553px;
+        }
+                
+        .content{
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .text{
+                z-index: 11;
+                img{
+                    width: 500px;
+                    height: 203px;
+                    @include  mediaQuery($break-md){
+                        height: 131.94px;
+                        width: 325px;
+                    }
+                }
+                h1{
+                    color: $clr-light;
+                    font-size: 3rem;
+                    margin-bottom: 16px;
+                    @include mediaQuery($break-md){
+                        font-size: 2.5rem;
+
+                    }
+                }
+                p{
+                    font-size: 2rem;
+                    color: rgba(249, 249, 249, .6);
+                    margin-bottom: 3.125rem;
+                    font-family: MarkPro;
+                    @include mediaQuery($break-md){
+                        display: none;
+                    }
+                }
+            }
+            a{
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include mediaQuery($break-md){
+                    font-size: 2.3rem;
+                    padding: 9px;
+                }
+                i{
+                    color: $clr-light;
+                    font-size: 2rem;
+                    background-color: $clr-dark;
+                    padding: 1rem;
+                    border-radius: 50%;
+                    margin-right: 1rem;
+                    filter: drop-shadow(0 4px 3px rgba(10, 10, 10, .4));
+                    @include mediaQuery($break-md){
+                        font-size: 1rem;
+                    }
+                }
+                p{
+                    margin-right: 12px;
+                    line-height: 1.5rem;
+                    // text-shadow: 0 0 4px rgba(0, 0, 0, .4);
+                    // letter-spacing: -.03em;
+                }
+            }
+
+        }
+        
+    }
+    position: relative;
+
+        &:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(275deg, rgba(10, 10, 10, 0) 0, rgba(10, 10, 10, .8) 120%);
+        }
+
+}
+
+.happening{
+    background-image: url(../img/home/happeningbg.png);
+    // background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include mediaQuery($break-md){
+        background-size: cover;
+        background-position: bottom right;
+    }
+    &__wrapper{
+        padding: 60px 0;
+        .title{
+            display: flex;  
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            @include mediaQuery($break-md){
+                margin-bottom: 40px;
+            }
+            h1{
+                font-size: 5rem;
+                color: $clr-light;
+            }
+            @include mediaQuery($break-md){
+                justify-content: center;
+                h1{
+                    font-size: 3rem;
+                }
+                a{
+                    display: none;
+                }
+            }
+            
+            
+        }
+        .happening__cards{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            justify-items: center;
+            @include mediaQuery($break-md){
+                grid-template-columns: 1fr;
+            }
+            .categ{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                span{
+                    background-color: $clr-dark;
+                    border-radius: 50%;
+                    padding: 0.7rem;
+                    svg{
+                        width: 18px;
+                        height: 18px;
+                        display: flex;
+                    }
+                }
+                h3{
+                    color: #94A3CD;
+                    font-size: 1.5rem;
+                }
+                @include mediaQuery($break-md){
+                    h3{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .highlight__card{
+                .imgWrap{
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    img{
+                        width: 1024px;
+                        height: 512px;
+                        
+                        transition: 0.5s ease;  
+                        @include mediaQuery($break-md){
+                            height: 221.5px;
+                            width: 443px;
+                        }
+                    }
+                }
+                h2{
+                    font-size: 3.1rem;
+                    color: $clr-light;
+                    margin-bottom: 16px;
+                    padding-top: 16px;
+                    br{
+                        display: none;
+                    }
+                    @include mediaQuery($break-md){
+                        font-size: 1.7rem;
+                        br{
+                            display: block;
+                        }
+                    }
+                }
+                
+                &:hover{
+                    cursor: pointer;
+                    @include mediaQuerymin($break-lg){
+                        .imgWrap{
+                            transform: translateY(-5px);
+                            transition: 0.5s ease;
+                            img{
+                                scale: 1.05;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .cards{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                .card{
+                    display: flex;
+                    background-color: rgba(46,61,103,.5);
+                    border-radius: 1rem;
+                    width: 683px;
+                    justify-content: space-between;
+                    img{
+                        height: 140px;
+                        border-radius: 1rem;
+                    }
+                    .text{
+                        h2{
+                            font-size: 1.8rem;
+                            color: $clr-light;
+                        }
+                        padding: 1rem;
+                        padding-left: 2rem;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 3rem;
+                    }
+                    transition: 0.5s ease;
+                    &:hover{
+                        background-color: #2E3D67;
+                        cursor: pointer;
+                        transform: translateY(-10px);
+                    }
+                    @include mediaQuery($break-md){
+                        width: 443px;
+                        img{
+                            height: 110px;
+                        }
+                        .text{
+                            gap: 1rem;
+                            h2{
+                                font-size: 1.6rem;
+                                display: -webkit-box;                
+                                -webkit-line-clamp: 2;               /* Number of lines before ellipsis */
+                                -webkit-box-orient: vertical;        
+                                overflow: hidden;                    
+                                text-overflow: ellipsis; 
+                            }
+                        }
+                    }
+                }
+            }
+            .deskHide{
+                display: none;
+                @include mediaQuery($break-md){
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.games{
+    padding-top: 100px;
+    background-image: url(../img/home/games/gamesbackground.png);
+    @include mediaQuery($break-md){
+        padding-top: 50px;
+    }
+    &__wrapper{
+        h2{
+            font-size: 5rem;
+            color: $clr-light;
+            margin-bottom: 60px;
+            @include mediaQuery($break-md){
+                font-size: 3rem;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+        .gamesCard__wrapper{
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            gap: 1rem;
+            .gamesCard__card{
+                position: relative;
+                border-radius: 1rem;
+                height: 389px;
+                width: 855px;
+                overflow: hidden;
+                border: 2px solid transparent;
+                transition: all .2s ease-out;
+                margin-bottom: 3rem;
+                @include mediaQuery($break-md){
+                    height: 202px;
+                    width: 443px;
+                    img{
+                        height: 202px;
+                        width: 443px;
+                    }
+                    .gamesCard__content{
+                        img{
+                            height: unset;
+                            width: 112.32px;
+                            
+                        }
+                    }
+                    svg{
+                        height: 13px;
+                    }
+                }
+                .gamesCard__content{
+                    position: absolute;
+                    top: 105px;
+                    left: 71px;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    // gap: 12rem;
+                    @include mediaQuery($break-md){
+                        top: 43px;
+                        left: 25px;
+                    }
+                    img{
+                     
+                        @include mediaQuerymin($break-lg){
+                            width: 180px;
+                        }
+                        
+                    }
+                    .gamesCard__platforms{
+                        margin: 0 auto;
+                        padding: 2px 4px;
+                        border-radius: 16px;
+                        background-color: rgba(138, 136, 135, .2);
+                        display: flex;
+                        position: absolute;
+                        top: 223px;
+                        left: 59px;
+                        @include mediaQuery($break-md){
+                            top: 121px;
+                            left: 37px;
+                        }
+                        @include mediaQuerymin($break-lg){
+                            svg{
+                                height: 19px;
+                            }
+                        }
+                        
+                    }
+                }
+                &:hover{
+                    border: 2px solid $clr-light;
+                    transition: all .2s ease-out;
+                }
+            }
+        }
+    }
+}
+
+.esports{
+    background-image: url(../img/home/games/gamesbackground.png);
+    @include mediaQuery($break-md){
+        padding-top: 0;
+    }
+    &__wrapper{
+        h2{
+            font-size: 5rem;
+            color: $clr-light;
+            margin-bottom: 60px;
+            @include mediaQuery($break-md){
+                font-size: 3rem;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+        .esportsCard__wrapper{
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            gap: 1rem;
+            .esportsCard__card{
+                position: relative;
+                border-radius: 1rem;
+                height: 389px;
+                width: 855px;
+                overflow: hidden;
+                border: 2px solid transparent;
+                transition: all .2s ease-out;
+                margin-bottom: 3rem;
+                svg{
+                    height: 13px;
+                }
+                @include mediaQuery($break-md){
+                    height: 202px;
+                    width: 443px;
+                    img{
+                        height: 202px;
+                        width: 443px;
+                    }
+                    .esportsCard__content{
+                        img{
+                            height: unset;
+                            width: 112.32px;
+                            
+                        }
+                    }
+                    svg{
+                        height: 13px;
+                    }
+                }
+                .esportsCard__content{
+                    position: absolute;
+                    top: 105px;
+                    left: 71px;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    // gap: 12rem;
+                    @include mediaQuery($break-md){
+                        top: 43px;
+                        left: 25px;
+                    }
+                    @include mediaQuerymin($break-lg){
+
+                        img{
+                            width: 180px;
+                        }
+                    }
+                    .esportsCard__platforms{
+                        margin: 0 auto;
+                        padding: 2px 4px;
+                        border-radius: 16px;
+                        background-color: rgba(138, 136, 135, .2);
+                        display: flex;
+                        position: absolute;
+                        top: 223px;
+                        left: 59px;
+                        @include mediaQuery($break-md){
+                            top: 121px;
+                            left: 37px;
+                        }
+                        
+                    }
+                }
+                &:hover{
+                    border: 2px solid $clr-light;
+                    transition: all .2s ease-out;
+                }
+            }
+        }
+    }
+}
+
+.entertainment{
+    background-image: url(../img/home/games/gamesbackground.png);
+    @include mediaQuery($break-md){
+        padding-top: 0;
+    }
+    &__wrapper{
+        h2{
+            font-size: 5rem;
+            color: $clr-light;
+            margin-bottom: 60px;
+            @include mediaQuery($break-md){
+                font-size: 3rem;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+        .entertainmentCard__wrapper{
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            gap: 1rem;
+            .entertainmentCard__card{
+                position: relative;
+                border-radius: 1rem;
+                height: 389px;
+                width: 855px;
+                overflow: hidden;
+                border: 2px solid transparent;
+                transition: all .2s ease-out;
+                margin-bottom: 3rem;
+                @include mediaQuery($break-md){
+                    height: 202px;
+                    width: 443px;
+                    img{
+                        height: 202px;
+                        width: 443px;
+                    }
+                    .entertainmentCard__content{
+                        img{
+                            height: unset;
+                            width: 112.32px;
+                            
+                        }
+                    }
+                    svg{
+                        height: 13px;
+                    }
+                }
+                .entertainmentCard__content{
+                    position: absolute;
+                    top: 105px;
+                    left: 71px;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    // gap: 12rem;
+                    @include mediaQuery($break-md){
+                        top: 43px;
+                        left: 25px;
+                    }
+                    img{
+                     
+                        @include mediaQuerymin($break-lg){
+                            width: 180px;
+                        }
+                        
+                    }
+                    .entertainmentCard__platforms{
+                        margin: 0 auto;
+                        padding: 2px 4px;
+                        border-radius: 16px;
+                        background-color: rgba(138, 136, 135, .2);
+                        display: flex;
+                        position: absolute;
+                        top: 223px;
+                        left: 59px;
+                        @include mediaQuery($break-md){
+                            top: 121px;
+                            left: 37px;
+                        }
+                        
+                    }
+                }
+                &:hover{
+                    border: 2px solid $clr-light;
+                    transition: all .2s ease-out;
+                }
+            }
+        }
+    }
+}
+
+.riotForge{
+    padding-bottom: 5rem;
+    background-image: url(../img/home/games/gamesbackground.png);
+    &__wrapper{
+        h2{
+            font-size: 5rem;
+            color: $clr-light;
+
+            @include mediaQuery($break-md){
+                font-size: 3rem;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+
+        // slider items design
+        .riotForge__slider{
+            .riotForgeCard__card{
+                position: relative;
+                border-radius: 1rem;
+                height: 256px;
+                width: 563px;
+                overflow: hidden;
+                border: 2px solid transparent;
+                transition: all .2s ease-out;
+                margin-bottom: 3rem;
+                @include mediaQuery($break-md){
+                    height: 202px;
+                    width: 443px;
+                    img{
+                        height: 202px;
+                        width: 443px;
+                    }
+                    .riotForgeCard__content{
+                        img{
+                            height: unset;
+                            width: 112.32px;
+                            
+                        }
+                    }
+                    svg{
+                        height: 13px;
+                    }
+                }
+                .riotForgeCard__content{
+                    position: absolute;
+                    top: 48px;
+                    left: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    // gap: 12rem;
+                    @include mediaQuery($break-md){
+                        top: 43px;
+                        left: 25px;
+                    }
+                    @include mediaQuerymin($break-lg){
+    
+                        img{
+                            width: 155.52px;
+                        }
+                    }
+                    .riotForgeCard__platforms{
+                        margin: 0 auto;
+                        padding: 2px 4px;
+                        border-radius: 16px;
+                        background-color: rgba(138, 136, 135, .2);
+                        display: flex;
+                        position: absolute;
+                        top: 166px;
+                        left: 66px;
+                        svg{
+                            height: 13px;
+                        }
+                        &.four{
+                            left: 47px;
+                        }
+                        @include mediaQuery($break-md){
+                            top: 121px;
+                            left: 37px;
+                        }
+                        
+                    }
+                }
+                &:hover{
+                    border: 2px solid $clr-light;
+                    transition: all .2s ease-out;
+                }
+            }
+        }
+
+        // slider design
+        #riotForge__controls{
+            display: flex;
+            justify-content: end;
+            @include mediaQuery($break-md){
+                display: none;
+            }
+            i{
+                color: $clr-light;
+            }
+            span{
+                display: inline-block;
+                height: 4rem;
+                width: 1px;
+                background-color: $clr-light;
+            }
+            #riotForge__controls--wrap{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                margin: 0 3rem 3rem 0;
+            }
+            
+        }
+        .tns-outer{
+            .tns-nav{
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                button{
+                    width: 6px;
+                    height: 6px;
+                    border: 0;
+                    border-radius: 50%;
+                    background-color: #adacaa;
+                    opacity: .6;
+                    transition: all .3s ease-out;
+                }
+                .tns-nav-active{
+                    background-color: #d1363a;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.hiring{
+    .hiring__wrapper{
+        
+        background-color: #dbe0ee;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .mob{
+            display: none;
+        }
+        @include mediaQuery($break-md){
+            grid-template-columns: 1fr;
+            img{
+                width: 499px;
+            }
+            .desk{
+                display: none;
+            }
+            .mob{
+                display: block;
+            }
+        }
+        @include mediaQuerymin($break-md){
+            img{
+                width: 996.81px;
+            }
+        }
+        .hiring__content{
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding-top: 6rem;
+            width: 100%;
+            @include mediaQuerymin($break-lg){
+                
+                    padding-left: 25rem;
+                    
+                
+            }
+            @include mediaQuery($break-md){
+
+                    padding-left: 0;
+                    width: 90%;
+                    margin-bottom: 2rem;
+                
+            }
+            h2{
+                font-size: 4.5rem;
+                @include mediaQuery($break-md){
+                    
+                        font-size: 3rem;
+                    
+                }
+            }
+            p{
+                font-family: $ff-secondary;
+                font-size: 1.9rem;
+                font-weight: 700;
+                color: #2e3d67;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -8%; 
+                width: 120%;
+                height: 100%;
+                background-color: #dbe0ee;
+                transform: skewX(-10deg); 
+                transform-origin: top left;
+                z-index: -1;
+            }
+            .hiring__jobs{
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                @include mediaQuery($break-md){
+                    scale: 0.85;
+                    gap: 1rem;
+                }
+                
+                &--content{
+                    background-color: #C5CDE4;
+                    width: 268px;
+                    height: 142px;
+                    border-radius: 1rem;
+                    margin: 5rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    span{
+                        font-size: 6rem;
+                        
+                    }
+                    p{
+                        font-family: $ff-primary;
+                        font-size: 2.5rem;
+                    }
+                    &:hover{
+                        background-color: #b8c1de;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

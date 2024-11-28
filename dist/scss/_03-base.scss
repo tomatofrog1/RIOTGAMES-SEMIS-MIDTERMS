@@ -1,11 +1,13 @@
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
   body {
     font-size: 1.6rem;
     line-height: 1.4;
     font-family: $ff-primary;
     position: relative;
+    
   }
 
   @font-face {
@@ -16,5 +18,10 @@ html {
   @font-face {
     font-family: MarkPro;
     src: url(../fonts/MarkPro.ttf);
+  }
+
+  @font-face {
+    font-family: Eco Coding;
+    src: url(../fonts/Eco\ Coding\ WGL4\ W01\ Regular.ttf)
   }
   
