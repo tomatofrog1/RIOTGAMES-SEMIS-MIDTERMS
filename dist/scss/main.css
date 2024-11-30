@@ -2412,7 +2412,7 @@ body {
   width: 477px;
 }
 
-officeBanner {
+.officeBanner {
   background-image: url(../img/office/officebanner.jpg);
   background-size: cover;
   background-position: center;
@@ -2421,12 +2421,12 @@ officeBanner {
   top: 8rem;
 }
 @media screen and (max-width: 760px) {
-  officeBanner {
+  .officeBanner {
     background-image: url(../img/office/mobilebanner.jpg);
     height: 927px;
   }
 }
-officeBanner:after {
+.officeBanner:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -2436,7 +2436,7 @@ officeBanner:after {
   background: rgba(10, 10, 10, 0.4);
   z-index: 10;
 }
-officeBanner__wrapper {
+.officeBanner__wrapper {
   position: absolute;
   z-index: 11;
   display: flex;
@@ -2446,7 +2446,7 @@ officeBanner__wrapper {
   height: 100%;
   width: 95%;
 }
-officeBanner__wrapper h2 {
+.officeBanner__wrapper h2 {
   background-color: rgb(209, 54, 57);
   color: #f9f9f9;
   font-size: 1.5rem;
@@ -2454,16 +2454,16 @@ officeBanner__wrapper h2 {
   letter-spacing: 2px;
 }
 @media screen and (max-width: 760px) {
-  officeBanner__wrapper h2 {
+  .officeBanner__wrapper h2 {
     font-size: 1rem;
   }
 }
-officeBanner__wrapper h1 {
+.officeBanner__wrapper h1 {
   font-size: 7rem;
   color: #f9f9f9;
 }
 @media screen and (max-width: 760px) {
-  officeBanner__wrapper h1 {
+  .officeBanner__wrapper h1 {
     font-size: 4rem;
     padding-top: 1rem;
   }

@@ -1,4 +1,4 @@
-officeBanner{
+.officeBanner{
     background-image: url(../img/office/officebanner.jpg);
     @include mediaQuery($break-md){
         background-image: url(../img/office/mobilebanner.jpg);
