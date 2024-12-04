@@ -297,18 +297,23 @@
                         position: absolute;
                         opacity: 0;
                         transition: 0.5s ease;
+                        z-index: 901;
                         img{
                             width: 200px;
                             height: 89px;
                         }
-                        a{
-                            background-color: $clr-red;
-                            border: $clr-red;
-                            color: $clr-light;
-                            font-family: $ff-secondary;
-                            border-radius: 20px; 
-                            border: none;
-                        }
+                        // a{
+                        //     background-color: $clr-red;
+                        //     border: $clr-red;
+                        //     color: $clr-light;
+                        //     font-family: $ff-faqBtn;
+                        //     font-size: 1.3rem;
+                        //     border-radius: 20px; 
+                        //     border: none;
+                        //     &:hover{
+                        //         background-color: $clr-gray;
+                        //     }
+                        // }
                         p{
                             font-family: $ff-secondary;
                             font-weight: 500;
@@ -325,6 +330,7 @@
                         gap: 7rem;
                         opacity: 1;
                         transition: 0.5s ease;
+                        z-index: 900;
                         img{
                             width: 60px;
                             padding-top: 7rem;
@@ -343,7 +349,6 @@
         @include mediaQuerymin($break-lg){
             display: none;
         }
-        /* Style the buttons that are used to open and close the accordion panel */
         .accordion {
             background-color: #eee;
             color: #444;
@@ -356,12 +361,10 @@
             transition: 0.4s;
         }
         
-        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
         .active, .accordion:hover {
             background-color: #ccc;
         }
         
-        /* Style the accordion panel. Note: hidden by default */
         .panel {
             padding: 0 18px;
             background-color: white;
@@ -381,6 +384,16 @@
             &.active{
                 &:after{
                     background:rgba(10, 10, 10, 0.0);
+                }
+                i{
+                    color: $clr-dark;
+                    background-color: $clr-light;
+                    span.open{
+                        display: none;
+                    }
+                    span.close{
+                        display: inline-block;
+                    }
                 }
             }
             &:after{
@@ -406,13 +419,18 @@
             img{
                 width: 40px;
             }
-            span{
+            i{
                 padding: 1px 7px;
                 border-radius: 50%;
                 color: $clr-light;
                 border: 1px solid $clr-light;
                 z-index: 11;
+                font-style: normal;
+                span.close{
+                    display: none;
+                }
             }
+
             
         }
         .panel{
@@ -444,12 +462,12 @@
                     padding-top: 1rem;
                     padding-bottom: 1rem;
                 }
-                a{
-                    font-family: $ff-secondary;
-                    padding: 1rem 2rem;
-                    background-color: $clr-red;
-                    border-radius: 2.5rem;
-                }
+                // a{
+                //     font-family: $ff-secondary;
+                //     padding: 1rem 2rem;
+                //     background-color: $clr-red;
+                //     border-radius: 2.5rem;
+                // }
             }
             
         }
@@ -592,14 +610,14 @@
                 font-size: 18px;
                 padding-bottom: 3rem;
             }
-            a{
-                background-color: $clr-red;
-                border: $clr-red;
-                color: $clr-light;
-                font-family: $ff-secondary;
-                border-radius: 20px; 
-                border: none;
-            }
+            // a{
+            //     background-color: $clr-red;
+            //     border: $clr-red;
+            //     color: $clr-light;
+            //     font-family: $ff-secondary;
+            //     border-radius: 20px; 
+            //     border: none;
+            // }
         }
         @include mediaQuery($break-md){
             display: flex;
@@ -634,6 +652,20 @@
                 display: flex;
                 justify-content: start;
                 align-items: center;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 181%;
+                    height: 133%;
+                    top: 0;
+                    left: -50%;
+                    background-position-x: 10%;
+                    background-image: url(../img/about/almedaIMG/bgtexture.png);
+                    background-size: cover;
+                    opacity: 15%;
+                    top: 0;
+                    z-index: 0;
+                }
                 .sec5__text{
                     position: relative;
                     z-index: 15;
@@ -658,14 +690,14 @@
                         font-size: 18px;
                         padding-bottom: 2rem;
                     }
-                    a{
-                        background-color: $clr-red;
-                        border: $clr-red;
-                        color: $clr-light;
-                        border: none;
-                        border-radius: 16px;
-                        font-family: $ff-secondary;
-                    }
+                    // a{
+                    //     background-color: $clr-red;
+                    //     border: $clr-red;
+                    //     color: $clr-light;
+                    //     border: none;
+                    //     border-radius: 16px;
+                    //     font-family: $ff-secondary;
+                    // }
                 }
             }
             .sec5__item2{

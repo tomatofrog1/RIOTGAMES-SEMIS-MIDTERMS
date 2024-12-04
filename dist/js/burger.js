@@ -28,10 +28,12 @@ window.addEventListener("scroll", () => {
 const navig = document.querySelectorAll('.navig')
 
 
+
+
 for (let nav of navig) {
     nav.addEventListener('click', ()=>{
     nav.nextElementSibling.classList.toggle('show')
-
+    nav.childNodes[3].classList.toggle('rotate')
 })
 }
 

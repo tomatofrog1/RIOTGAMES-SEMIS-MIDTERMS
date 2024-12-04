@@ -1,12 +1,26 @@
 .header{
     background-color: rgba($color: $clr-dark, $alpha: 0);
+    &.dark{
+        background-color: rgba($color: $clr-dark, $alpha: 1);
+    }
     &.scroll{
         background-color: rgba($color: $clr-dark, $alpha: 1);
         border-bottom: 1px solid $clr-gray;
         .header__nav .hideMobile .funcs .search{
             border: none;
             background-color: $clr-gray;
+            input{
+                background: none;
+                border: none;
+                outline: none;
+                color: $clr-light;
+                &::placeholder{
+                    color: $clr-lightgrey-text;
+                    font-size: 1.15rem;
+                }
+            }
         }
+
     }
     z-index: 999;
     position: fixed;
@@ -72,7 +86,7 @@
         }
         .hideMobile{
             display: flex;
-            gap: 80rem;
+            gap: 85rem;
             .appearMobile{
                 display: none;
             }
@@ -91,7 +105,9 @@
                     padding: 0 1rem;
                     border-radius: 1rem;
                     &:hover{
-                        background-color: rgba($color: $clr-gray, $alpha: 0.7);
+                        @include mediaQuerymin($break-lg){
+                            background-color: rgba($color: $clr-gray, $alpha: 0.7);
+                        }
                         cursor: pointer;
                         i{
                             color: $clr-light;
@@ -121,12 +137,19 @@
                     position: relative;
                 }
                 .navig {
-                
+                    
                     padding: 10px;
                     cursor: pointer;
                     a{
                         padding-bottom: 3rem;
+                        @include mediaQuery($break-sm){
+                            padding-bottom: 0rem;
+                        }
                         
+                    }
+                    @include mediaQuery($break-sm){
+                        display: flex;
+                        align-items: center;
                     }
                 }
                 .dropdown-content {
@@ -176,19 +199,34 @@
                         fill: $clr-light;
                     }
                 }
+
                 .search{
-                    border: 1px solid $clr-light;
+                    border: 1px solid $clr-gray;
+                    background-color: $clr-gray;
                     padding: 0.5rem 1rem;
                     border-radius: 3rem;
+                    &.home{
+                        border: 1px solid $clr-light;
+                        background-color: transparent;
+                        input{
+                            border: $clr-light;
+                            &::placeholder{
+                                color: $clr-light;
+                            }
+                        }
+                    }
                     input{
                         background: none;
                         border: none;
-                        ::placeholder{
-                            color: $clr-light;
+                        outline: none;
+                        color: $clr-light;
+                        &::placeholder{
+                            color: $clr-lightgrey-text;
+                            font-size: 1.15rem;
                         }
                     }
                     i{
-                        font-size: 1.5rem;
+                        font-size: 1.7rem;
                     }
                 }
             }
@@ -258,6 +296,9 @@
                 
                 margin-left: 4rem;
                 gap: 3rem;
+                @include mediaQuery($break-sm){
+                    gap: 0rem;
+                }
                 i{
                     margin-left: 0.5rem;
                 }
@@ -267,6 +308,9 @@
                     width: 41rem;
                     display: flex;
                     justify-content: space-between;
+                    @include mediaQuery($break-sm){
+                        padding: 0rem;
+                    }
                     // &:hover{
                     //     background-color: $clr-gray;
                     // }
@@ -284,6 +328,15 @@
                 
                     padding: 10px;
                     cursor: pointer;
+                    @include mediaQuery($break-sm){
+                        &:hover{
+                            background-color: rgba(128,128,128,.3);
+                            border-radius: 1rem;
+                        }
+                        i.rotate{
+                            transform: rotate(180deg);
+                        }
+                    }
                 }
                 .dropdown-content {
                     display: none;
@@ -497,7 +550,7 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 img{
-                    width: 451px;
+                    width: 440px;
                     height: 292.45px;
                     border-radius: 1rem;
                     &:hover{

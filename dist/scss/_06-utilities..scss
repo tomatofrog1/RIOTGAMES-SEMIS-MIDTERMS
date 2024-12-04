@@ -43,7 +43,7 @@
 
     // SK
     &.viewQ{
-        padding: 11px 29px ;
+        padding: 11px 29px;
         color: $clr-red;
         border: 1px solid $clr-dark;
         font-size: 1.5rem;
@@ -53,4 +53,20 @@
             scale: 0.85;
         }
     }
+    &.about{
+        padding: 11px 29px ;
+        border: 1px solid $clr-dark;
+        background-color: $clr-red;
+        border: $clr-red;
+        color: $clr-light;
+        font-family: $ff-faqBtn;
+        font-size: 1.3rem;
+        border-radius: 20px; 
+        border: none;
+        &:hover{
+        background-color: $clr-gray;
+        text-decoration: underline;
+        }
+    }
+
 }

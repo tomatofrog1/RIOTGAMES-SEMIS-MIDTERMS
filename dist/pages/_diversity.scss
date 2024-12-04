@@ -1,0 +1,391 @@
+.diversityBanner{
+    background-image: url(../img/diversity/diversitybg.png);
+    @include mediaQuery($break-md){
+        background-image: url(../img/diversity/smalldiversitybanner.png);
+        height: 927px;
+    }
+    background-size: cover;
+    background-position: center;
+    height: 60rem;
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background:rgba(10, 10, 10, .4);
+        z-index: 10;
+    }
+    &__wrapper{
+        position: absolute;
+        z-index: 11;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 95%;
+        
+        h2{
+            background-color: $clr-red;
+            color: $clr-light;
+            font-size: 1.5rem;
+            padding: 0.5rem 2rem;
+            letter-spacing: 2px;
+            @include mediaQuery($break-md){
+                font-size: 1rem;
+            }
+        }
+        h1{
+            font-size: 8rem;
+            @include mediaQuery($break-md){
+                font-size: 4rem;
+                padding-top: 1rem;
+            }
+            color: $clr-light;
+        }
+        p{
+            color: $clr-light;
+            font-family: $ff-secondary;
+            font-size: 2.3rem;
+            text-align: center;
+            @include mediaQuery($break-md){
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.work{
+    padding-bottom: 8rem;
+    background-color: #E7E6E3;
+    &__wrapper{
+        .work__text{
+            margin: 0 411.656px;
+            padding: 0 40px;
+            padding-bottom: 3rem;
+            @include mediaQuery($break-md){
+                margin: 0;
+                padding: 3rem 0;
+            }
+            p{
+                font-size: 2.13rem;
+                font-family: $ff-secondary;
+                font-weight: 500;
+                line-height: 4rem;
+                @include mediaQuery($break-md){
+                    font-size: 1.5rem;
+                    line-height: 3rem;
+                    
+                }
+            }
+            
+        }
+        .work__cards{
+            h2{
+                text-align: center;
+                font-size: 4rem;
+            }
+            .workCards__wrap{
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                @include mediaQuery($break-md){
+                    flex-direction: column;
+                }
+                .work__cards--card{
+                    display: flex;
+                    flex-direction: column;
+                    width: 332px;
+                    @include mediaQuery($break-md){
+                        flex-direction: row;
+                        width: 100%;
+                        height: 133px;
+                        overflow: hidden;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        img{
+                            scale: 1.05;
+                            transition: 0.3s ease;
+                        }
+                        h3{
+                            text-decoration: underline;
+                        }
+                        .image__wrap{
+                            
+                            &:after{
+                                background:rgba(43, 42, 41, 0.5);
+                                transition: 0.3s ease;
+                            }
+                        }
+                    }
+                    .image__wrap{
+                        overflow: hidden;
+                        object-fit: center;
+                        height: 424px;
+                        position: relative;
+                        transition: 0.3s ease;
+                        &::after{
+                            content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                left: 0;
+                                top: 0;
+                                background:rgba(43, 42, 41, 0);
+                                z-index: 10;
+                                transition: 0.3s ease;
+                        }
+                        img{
+                            transition: 0.3s ease;
+                        }
+                        .indMob{
+                            display: none;
+                        }
+                        @include mediaQuery($break-md){
+                            width: 197px;
+                            .indDesk{
+                                display: none;
+                            }
+                            .indMob{
+                                display: block;
+                                width: 133px;
+                            }
+                        }
+                        
+                        
+                    }
+                    .work__cards--card__text{
+                        padding: 20px;
+                        background-color: #2b2a29;
+                        @include mediaQuery($break-md){
+                            width: 100%;
+                        }
+                        h3{
+                            color: $clr-light;
+                        }
+                        a{
+                            font-family: $ff-faqBtn;
+                            @include mediaQuery($break-md){
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.partners_reports{
+    background-color: #E7E6E3;
+    padding-bottom: 8rem;
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        @include mediaQuery($break-md){
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .item{
+            text-align: center;
+            p{
+                font-family:$ff-secondary;
+                font-size: 2.3rem;
+                padding-bottom: 5rem;
+                @include mediaQuery($break-md){
+                    font-size: 1.5rem;
+                }
+            }
+            h2{
+                font-size: 3rem;
+                padding-bottom: 2rem;
+                @include mediaQuery($break-md){
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}
+
+.latest__news{
+    background: url(../img/diversity/bg-latest-news.jpg);
+    &__wrapper{
+        width: 128rem;
+        margin: 0 auto;
+        @include mediaQuery($break-md){
+            width: unset;
+        }
+        h2{
+            font-size: 4rem;
+            text-align: center;
+        }
+        .newsCard__wrapper{
+            .news_card{
+                position: relative;
+                width: 600px;
+                @include mediaQuery($break-md){
+                    scale: 0.7;
+                }
+                &:hover{
+                    cursor: pointer;
+                    
+                    .brush{
+                        path{
+                            fill: $clr-red;
+                        }
+                    }
+                    .lines{
+                        path{
+                            fill: $clr-light;
+                        }
+                    }
+                    .imgWrap{
+                            &::after{
+                                background:rgba(43, 42, 41, 0.5);
+                                z-index: 10;
+                                transition: 0.3s ease;
+                            }
+                            img{
+                                scale: 1.05;
+                                transition: 0.3s ease;
+                            }
+                    }
+                    h3{
+                        text-decoration: underline;
+                    }
+                }
+                .imgWrap{
+                    position: relative;
+                    overflow: hidden;
+                    width: 600px;
+                    height: 337.5px;
+                    img{
+                        width: 600px;
+                        height: 100%;
+                        transition: 0.3s ease;
+                    }
+                    &::after{
+                        content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                            background:rgba(43, 42, 41, 0);
+                            z-index: 10;
+                            transition: 0.3s ease;
+                    }
+                }
+                .brush{
+                    width: 50px;
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    z-index: 11;
+                    path{
+                        fill: $clr-light;
+                    }
+                }
+                .lines{
+                    z-index: 11;
+                    width: 20px;
+                    position: absolute;
+                    left: 25px;
+                    top: 28px;
+
+                    path{
+                        fill: $clr-red;
+                    }
+                }
+                &--content{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 4rem;
+                    position: relative;
+                    width: 600px;
+                    h4{
+                        background-color: $clr-red;
+                        color: $clr-light;
+                        font-size: 1.05rem;
+                        padding: 0.5rem 1rem;
+                        letter-spacing: 2px;
+                        width: 107px;
+                    }
+                    h3{
+                        padding-top: 2rem;
+                        font-size: 2.8rem;
+                    }
+                    p{
+                        font-family: $ff-secondary;
+                        color: $clr-grey-text;
+                        @include mediaQuery($break-md){
+                            display: none;
+                        }
+                    }
+                    span{
+                        position: absolute;
+                        left: -34px;
+                        top: 83px;
+                        transform: rotate(-90deg);
+                        font-size: 1.5rem;
+                        font-family: $ff-faqBtn;
+                    }
+                }
+            }
+        }
+        #newsCard__controls{
+            display: flex
+            ;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+                position: relative;
+                top: 250px;
+                right: -1300px;
+                width: 40px;
+                @include mediaQuery($break-md){
+                    display: none;
+                }
+            svg{
+                width: 14px;
+            
+                &:hover{
+                    cursor: pointer;
+                    fill: $clr-red;
+                }
+            }
+            span{
+                width: 35px;
+                height: 2px;
+                background-color: $clr-lightgrey-text;
+            }
+        }
+    }
+    .tns-outer{
+        .tns-nav{
+            display: flex;
+            justify-content: center;
+            button{
+                background-color: $clr-lightgrey-text;
+                width: 6px;
+                height: 6px;
+                border: none;
+                border-radius: 50%;
+                margin: 3px;
+                &:hover{
+                    scale: 1.2;
+                }
+            }
+            .tns-nav-active{
+                background-color: $clr-red;
+            }
+        }
+        
+    }
+    
+}
