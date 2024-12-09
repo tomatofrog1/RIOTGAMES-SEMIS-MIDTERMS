@@ -19,7 +19,7 @@
             align-items: center;
         }
         @include mediaQuery($break-md){
-            width: 483px;
+            width: 93vw;
             height: 553px;
         }
                 
@@ -182,8 +182,9 @@
                         
                         transition: 0.5s ease;  
                         @include mediaQuery($break-md){
-                            height: 221.5px;
-                            width: 443px;
+                            border-radius: 1rem;
+                            height: 197px;
+                            width: 350px;
                         }
                     }
                 }
@@ -255,7 +256,7 @@
                         transform: translateY(-10px);
                     }
                     @include mediaQuery($break-md){
-                        width: 443px;
+                        width: 360px;
                         img{
                             height: 110px;
                         }
@@ -716,6 +717,8 @@
         grid-template-columns: 1fr 1fr;
         .mob{
             display: none;
+            width: 393px;
+            height: 350px;
         }
         @include mediaQuery($break-md){
             grid-template-columns: 1fr;
@@ -800,7 +803,9 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    
+                    @include mediaQuery($break-md){
+                        width: 214px;
+                    }
                     span{
                         font-size: 6rem;
                         

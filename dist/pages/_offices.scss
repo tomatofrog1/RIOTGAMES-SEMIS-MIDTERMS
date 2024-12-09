@@ -319,9 +319,16 @@
             .faq__title{
                 h2{
                     font-size: 6rem;
+                    br{
+                        display: none;
+                    }
                     @include mediaQuery($break-md){
                         font-size: 3rem;
                         margin-bottom: 2rem;
+                        text-align: center;
+                        br{
+                            display: block;
+                        }
                     }
                 }
             }

@@ -8,11 +8,12 @@ var slider = tns({
     containerControls: "#newsCard__controls",
     prevButton: ".prev",
     nextButton: ".next",
+    gutter: 10,
     responsive: {
         900: {
             items: 2
         },
-        500: {
+        200: {
           items: 1
         }
       }

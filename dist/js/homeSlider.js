@@ -12,10 +12,12 @@ var serviceSlide = tns({
     mouseDrag: true,
     responsive: {
         1080: {
-          items: 3
+          items: 3,
         },
-        480: {
-            items: 1
+        200: {
+            items: 1,
         }
       }
   });
+
+  // console.log('homesliderworking')

@@ -89,7 +89,7 @@ body {
 }
 @media screen and (max-width: 760px) {
   .btn.hiring {
-    width: 467px;
+    width: 358px;
   }
 }
 .btn.viewQ {
@@ -147,7 +147,7 @@ body {
 }
 @media screen and (max-width: 760px) {
   .homeBanner__wrapper {
-    width: 483px;
+    width: 93vw;
     height: 553px;
   }
 }
@@ -318,8 +318,9 @@ body {
 }
 @media screen and (max-width: 760px) {
   .happening__wrapper .happening__cards .highlight__card .imgWrap img {
-    height: 221.5px;
-    width: 443px;
+    border-radius: 1rem;
+    height: 197px;
+    width: 350px;
   }
 }
 .happening__wrapper .happening__cards .highlight__card h2 {
@@ -390,7 +391,7 @@ body {
 }
 @media screen and (max-width: 760px) {
   .happening__wrapper .happening__cards .cards .card {
-    width: 443px;
+    width: 360px;
   }
   .happening__wrapper .happening__cards .cards .card img {
     height: 110px;
@@ -841,6 +842,8 @@ body {
 }
 .hiring .hiring__wrapper .mob {
   display: none;
+  width: 393px;
+  height: 350px;
 }
 @media screen and (max-width: 760px) {
   .hiring .hiring__wrapper {
@@ -930,6 +933,11 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+@media screen and (max-width: 760px) {
+  .hiring .hiring__wrapper .hiring__content .hiring__jobs--content {
+    width: 214px;
+  }
+}
 .hiring .hiring__wrapper .hiring__content .hiring__jobs--content span {
   font-size: 6rem;
 }
@@ -944,7 +952,7 @@ body {
 
 .footer {
   background-color: #252423;
-  height: 100vh;
+  height: 125vh;
   padding-top: 7rem;
   position: relative;
   z-index: 1;
@@ -1144,6 +1152,20 @@ body {
   display: flex;
   gap: 85rem;
 }
+@media screen and (max-width: 760px) {
+  .header__nav .hideMobile.office .navi .navig, .header__nav .hideMobile.office .navi li {
+    width: 38rem;
+  }
+}
+.header__nav .hideMobile.diversity {
+  width: 135vw;
+  height: 135vh;
+}
+@media screen and (max-width: 760px) {
+  .header__nav .hideMobile.diversity .navi .navig, .header__nav .hideMobile.diversity .navi li {
+    width: 48rem;
+  }
+}
 .header__nav .hideMobile .appearMobile {
   display: none;
 }
@@ -1299,13 +1321,17 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    gap: 5rem;
+    gap: 0rem;
     left: 100%;
     top: 0;
     height: 100vh;
     width: 100vw;
     background-color: #1f1f1f;
     transition: 1s ease;
+  }
+  .header__nav .hideMobile.office {
+    width: 110vw;
+    height: 110vh;
   }
   .header__nav .hideMobile .appearMobile {
     padding: 2rem;
@@ -1352,13 +1378,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 4rem;
+    margin-left: 2rem;
     gap: 3rem;
   }
 }
 @media screen and (max-width: 760px) and (max-width: 520px) {
   .header__nav .hideMobile .navi {
     gap: 0rem;
+    margin-bottom: 5rem;
   }
 }
 @media screen and (max-width: 760px) {
@@ -1368,7 +1395,7 @@ body {
   .header__nav .hideMobile .navi .navig, .header__nav .hideMobile .navi li {
     padding: 1rem 2rem;
     font-size: 1.7rem;
-    width: 41rem;
+    width: 35rem;
     display: flex;
     justify-content: space-between;
   }
@@ -1456,7 +1483,7 @@ body {
     font-size: 1.5rem;
   }
   .header__nav .hideMobile .funcs .btn {
-    width: 45rem;
+    width: 35rem;
     display: flex;
     justify-content: center;
     margin-top: 5rem;
@@ -1594,6 +1621,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media screen and (max-width: 760px) {
+  .header .header__categories .content .category__display.diversity img {
+    width: 488px;
+    height: 308px;
+  }
+}
 @media screen and (min-width: 980px) {
   .header .header__categories .content .category__display.hide {
     display: none;
@@ -1603,6 +1636,12 @@ body {
   width: 440px;
   height: 292.45px;
   border-radius: 1rem;
+}
+@media screen and (max-width: 760px) {
+  .header .header__categories .content .category__display img {
+    width: 358px;
+    height: 232px;
+  }
 }
 .header .header__categories .content .category__display img:hover {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -1619,6 +1658,9 @@ body {
     right: 100%;
     overflow-y: auto;
     height: 100vh;
+  }
+  .header .header__categories.diversity {
+    height: 137vh;
   }
   .header .header__categories.open {
     right: 0;
@@ -2087,9 +2129,9 @@ body {
 }
 .gameGallery__wrapper--mobile .panel .imageWrap img {
   position: absolute;
-  left: 0;
+  left: 0px;
   top: -100px;
-  width: 477px;
+  width: 390px;
 }
 .gameGallery__wrapper--mobile .panel .panel__content {
   display: flex;
@@ -2835,10 +2877,17 @@ body {
 .faq .container .faq__wrapper .faq__wrap_wrap .faq__title h2 {
   font-size: 6rem;
 }
+.faq .container .faq__wrapper .faq__wrap_wrap .faq__title h2 br {
+  display: none;
+}
 @media screen and (max-width: 760px) {
   .faq .container .faq__wrapper .faq__wrap_wrap .faq__title h2 {
     font-size: 3rem;
     margin-bottom: 2rem;
+    text-align: center;
+  }
+  .faq .container .faq__wrapper .faq__wrap_wrap .faq__title h2 br {
+    display: block;
   }
 }
 @media screen and (max-width: 760px) {
