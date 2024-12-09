@@ -95,9 +95,10 @@
                     }
                 }
                 &.diversity{
-                    width: 135vw;
-                    height: 135vh;
+                    
                     @include mediaQuery($break-md){
+                        width: 135vw;
+                        height: 135vh;
                         .navi{
                             .navig, li{
                                 width: 48rem;

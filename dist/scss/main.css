@@ -1157,11 +1157,11 @@ body {
     width: 38rem;
   }
 }
-.header__nav .hideMobile.diversity {
-  width: 135vw;
-  height: 135vh;
-}
 @media screen and (max-width: 760px) {
+  .header__nav .hideMobile.diversity {
+    width: 135vw;
+    height: 135vh;
+  }
   .header__nav .hideMobile.diversity .navi .navig, .header__nav .hideMobile.diversity .navi li {
     width: 48rem;
   }
